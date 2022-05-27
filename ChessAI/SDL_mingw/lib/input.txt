@@ -1,0 +1,13 @@
+-lmingw32
+-lSDL2_image
+-lSDL2_mixer
+-lSDL2_ttf
+-lSDL2main
+
+libfreetype-6.dll
+libpng16-16.dll
+SDL2.dll
+SDL2_image.dll
+SDL2_mixer.dll
+SDL2_ttf.dll
+zlib1.dll

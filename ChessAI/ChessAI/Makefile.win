@@ -1,0 +1,112 @@
+# Project: ChessAIDevC
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = ChessAI.o view/ChessBoardInterface.o view/ChoosePlayerWindow.o view/Node.o view/PhongCapWindow.o view/Scene.o view/View.o view/Window.o controlobject/AI.o controlobject/AIMinimax.o controlobject/AIMinimaxTime.o controlobject/AINegamax.o controlobject/EventSolver.o controlobject/Game.o controlobject/Heuristic.o controlobject/History.o controlobject/Human.o controlobject/Move.o controlobject/Player.o controlobject/Point.o controlobject/Trongtai.o chessobject/ChessBoard.o chessobject/Hau.o chessobject/Ma.o chessobject/Piece.o chessobject/Tot.o chessobject/Tuong.o chessobject/Vua.o chessobject/Xe.o
+LINKOBJ  = ChessAI.o view/ChessBoardInterface.o view/ChoosePlayerWindow.o view/Node.o view/PhongCapWindow.o view/Scene.o view/View.o view/Window.o controlobject/AI.o controlobject/AIMinimax.o controlobject/AIMinimaxTime.o controlobject/AINegamax.o controlobject/EventSolver.o controlobject/Game.o controlobject/Heuristic.o controlobject/History.o controlobject/Human.o controlobject/Move.o controlobject/Player.o controlobject/Point.o controlobject/Trongtai.o chessobject/ChessBoard.o chessobject/Hau.o chessobject/Ma.o chessobject/Piece.o chessobject/Tot.o chessobject/Tuong.o chessobject/Vua.o chessobject/Xe.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -static-libgcc -L"C:/Users/computer/Desktop/ChessAIDevC/SDL_mingw/lib" -L"../ChessAIDevC/SDL_mingw/lib" -L"../SDL_mingw/lib" -lmingw32 -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lSDL2main  libfreetype-6.dll libpng16-16.dll SDL2.dll SDL2_image.dll SDL2_mixer.dll SDL2_ttf.dll zlib1.dll
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/computer/Desktop/ChessAIDevC/SDL_mingw/include" -I"../SDL_mingw/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"C:/Users/computer/Desktop/ChessAIDevC/SDL_mingw/include" -I"../SDL_mingw/include"
+BIN      = ChessAIDevC.exe
+CXXFLAGS = $(CXXINCS) -std=gnu++11
+CFLAGS   = $(INCS) -std=gnu++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+ChessAI.o: ChessAI.cpp
+	$(CPP) -c ChessAI.cpp -o ChessAI.o $(CXXFLAGS)
+
+view/ChessBoardInterface.o: view/ChessBoardInterface.cpp
+	$(CPP) -c view/ChessBoardInterface.cpp -o view/ChessBoardInterface.o $(CXXFLAGS)
+
+view/ChoosePlayerWindow.o: view/ChoosePlayerWindow.cpp
+	$(CPP) -c view/ChoosePlayerWindow.cpp -o view/ChoosePlayerWindow.o $(CXXFLAGS)
+
+view/Node.o: view/Node.cpp
+	$(CPP) -c view/Node.cpp -o view/Node.o $(CXXFLAGS)
+
+view/PhongCapWindow.o: view/PhongCapWindow.cpp
+	$(CPP) -c view/PhongCapWindow.cpp -o view/PhongCapWindow.o $(CXXFLAGS)
+
+view/Scene.o: view/Scene.cpp
+	$(CPP) -c view/Scene.cpp -o view/Scene.o $(CXXFLAGS)
+
+view/View.o: view/View.cpp
+	$(CPP) -c view/View.cpp -o view/View.o $(CXXFLAGS)
+
+view/Window.o: view/Window.cpp
+	$(CPP) -c view/Window.cpp -o view/Window.o $(CXXFLAGS)
+
+controlobject/AI.o: controlobject/AI.cpp
+	$(CPP) -c controlobject/AI.cpp -o controlobject/AI.o $(CXXFLAGS)
+
+controlobject/AIMinimax.o: controlobject/AIMinimax.cpp
+	$(CPP) -c controlobject/AIMinimax.cpp -o controlobject/AIMinimax.o $(CXXFLAGS)
+
+controlobject/AIMinimaxTime.o: controlobject/AIMinimaxTime.cpp
+	$(CPP) -c controlobject/AIMinimaxTime.cpp -o controlobject/AIMinimaxTime.o $(CXXFLAGS)
+
+controlobject/AINegamax.o: controlobject/AINegamax.cpp
+	$(CPP) -c controlobject/AINegamax.cpp -o controlobject/AINegamax.o $(CXXFLAGS)
+
+controlobject/EventSolver.o: controlobject/EventSolver.cpp
+	$(CPP) -c controlobject/EventSolver.cpp -o controlobject/EventSolver.o $(CXXFLAGS)
+
+controlobject/Game.o: controlobject/Game.cpp
+	$(CPP) -c controlobject/Game.cpp -o controlobject/Game.o $(CXXFLAGS)
+
+controlobject/Heuristic.o: controlobject/Heuristic.cpp
+	$(CPP) -c controlobject/Heuristic.cpp -o controlobject/Heuristic.o $(CXXFLAGS)
+
+controlobject/History.o: controlobject/History.cpp
+	$(CPP) -c controlobject/History.cpp -o controlobject/History.o $(CXXFLAGS)
+
+controlobject/Human.o: controlobject/Human.cpp
+	$(CPP) -c controlobject/Human.cpp -o controlobject/Human.o $(CXXFLAGS)
+
+controlobject/Move.o: controlobject/Move.cpp
+	$(CPP) -c controlobject/Move.cpp -o controlobject/Move.o $(CXXFLAGS)
+
+controlobject/Player.o: controlobject/Player.cpp
+	$(CPP) -c controlobject/Player.cpp -o controlobject/Player.o $(CXXFLAGS)
+
+controlobject/Point.o: controlobject/Point.cpp
+	$(CPP) -c controlobject/Point.cpp -o controlobject/Point.o $(CXXFLAGS)
+
+controlobject/Trongtai.o: controlobject/Trongtai.cpp
+	$(CPP) -c controlobject/Trongtai.cpp -o controlobject/Trongtai.o $(CXXFLAGS)
+
+chessobject/ChessBoard.o: chessobject/ChessBoard.cpp
+	$(CPP) -c chessobject/ChessBoard.cpp -o chessobject/ChessBoard.o $(CXXFLAGS)
+
+chessobject/Hau.o: chessobject/Hau.cpp
+	$(CPP) -c chessobject/Hau.cpp -o chessobject/Hau.o $(CXXFLAGS)
+
+chessobject/Ma.o: chessobject/Ma.cpp
+	$(CPP) -c chessobject/Ma.cpp -o chessobject/Ma.o $(CXXFLAGS)
+
+chessobject/Piece.o: chessobject/Piece.cpp
+	$(CPP) -c chessobject/Piece.cpp -o chessobject/Piece.o $(CXXFLAGS)
+
+chessobject/Tot.o: chessobject/Tot.cpp
+	$(CPP) -c chessobject/Tot.cpp -o chessobject/Tot.o $(CXXFLAGS)
+
+chessobject/Tuong.o: chessobject/Tuong.cpp
+	$(CPP) -c chessobject/Tuong.cpp -o chessobject/Tuong.o $(CXXFLAGS)
+
+chessobject/Vua.o: chessobject/Vua.cpp
+	$(CPP) -c chessobject/Vua.cpp -o chessobject/Vua.o $(CXXFLAGS)
+
+chessobject/Xe.o: chessobject/Xe.cpp
+	$(CPP) -c chessobject/Xe.cpp -o chessobject/Xe.o $(CXXFLAGS)
